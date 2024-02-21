@@ -1,0 +1,166 @@
+/* Montserrat Google Font and Fraunces Googl Font */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 630px;
+  width: 100%;
+  max-height: 460px;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.right {
+  flex: 1;
+  order: 2;
+  height: 100%;
+}
+.article {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.article .type {
+  order: -1;
+  font-size: 12px;
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat",sans-serif;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+.article .name {
+  font-size: 33px;
+  font-family: "Fraunces",sans-serif;
+  font-weight: 800;
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+.article .description {
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat",sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 240px;
+  width: 100%;
+}
+.article .price{
+  display: flex;
+  align-items: center;
+  order: 1;
+  margin-top: 30px;
+  font-family: "Fraunces",sans-serif;
+  font-size: 35px;
+  color: hsl(158, 36%, 37%);
+}
+.price span {
+  font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  margin-left: 20px;
+  text-decoration: line-through hsl(228, 12%, 48%);;
+}
+.article .btn {
+  order: 2;
+  margin-top: 25px;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 0px;
+  font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: hsla(158, 47%, 21%, 0.9)
+}
+.btn .btn-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-text {
+  margin-right: 10px;
+}
+.mobile {
+  display: none;
+}
+.left {
+  flex: 1;
+  order: 1;
+  height: 100%;
+}
+.desktop {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px 0px 0px 12px ;
+}
+@media (max-width:375px) {
+  .container {
+    max-height: 605px;
+    height: 100%;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .desktop {
+    display: none;
+  }
+  .left {
+    flex: 1;
+  }
+  .right {
+    flex: 2;
+  }
+  .article {
+    padding: 10px 25px;
+  }
+  .article .description {
+    max-width: 295px;
+  }
+  .mobile {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px 12px 0px 0px ;
+  }
+  .article .name {
+    margin-bottom: 12px;
+  }
+  .article .type {
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+  .article .price {
+    margin-top: 15px;
+  }
+  .article .btn {
+    margin-top: 15px;
+  }
+}
